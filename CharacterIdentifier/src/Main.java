@@ -2,7 +2,10 @@ import java.util.Scanner;
 
 public class Main {
 public static void identifyCharacter(char ch) {
-	if(Character.isLetter(ch)== true) {
+	if(Character.isDigit(ch)) {
+		System.out.println("Entered Character "+ch+" is digit");
+	}
+	else if(Character.isLetter(ch)== true) {
 		if(Character.isUpperCase(ch)) {
 			if(ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U') {
 				System.out.println("Upper-case Vowel");
@@ -21,8 +24,9 @@ public static void identifyCharacter(char ch) {
 		}
 	}
 	else {
-		System.out.println("Please enter a character");
+		System.out.println("Entered character "+ch+" is special character");
 	}
+	
 }
 public static void main(String[] args) {
 	Scanner scan = new Scanner(System.in);
